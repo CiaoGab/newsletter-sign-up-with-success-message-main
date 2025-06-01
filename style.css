@@ -18,10 +18,11 @@
     --font-size-p3:1.2rem;
 }
 body {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     font-family: 'Roboto', sans-serif;
+    align-items: center;
 }
 h1 {
     font-size: var(--font-size-p1);
@@ -36,6 +37,7 @@ p {
 }
 .main-container {
     min-width: 37.5rem;
+    margin-bottom: 4.4rem;
     
 }
 .img-container {
