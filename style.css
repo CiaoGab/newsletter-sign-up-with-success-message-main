@@ -22,7 +22,6 @@ body {
     display: flex;
     justify-content: center;
     font-family: 'Roboto', sans-serif;
-    align-items: center;
 }
 h1 {
     font-size: var(--font-size-p1);
@@ -38,6 +37,7 @@ p {
 .main-container {
     min-width: 37.5rem;
     margin-bottom: 4.4rem;
+    max-height: 79.8rem;
     
 }
 .img-container {
@@ -104,6 +104,16 @@ p {
     font-size: var(--font-size-p2);
 }
 
+.label-container {
+    display: flex;
+    justify-content: space-between;
+}
+#error-message {
+    color: red;
+    font-size: var(--font-size-p3);
+    display: none;
+}
+
 /* success message styling */
 
 .success-message-container {
@@ -147,4 +157,78 @@ p {
     border-radius: .8rem;
     max-height: 5.6rem;
     font-weight: var(--roboto-bold);
+}
+
+@media screen and (min-width: 500px) {
+    body {
+        background-color: var(--Blue-800);
+        align-items: center;
+    }
+    .main-container {
+        background-color: var(--White);
+        max-height: 87.8rem;
+        width: 60.8rem;
+        border-radius: 3.6rem;
+        padding: 4rem;
+        margin: 0;
+    }
+    .img-container {
+        max-height: 35.8rem;
+        max-width: 52.8rem;
+        border-radius: 1.6rem;
+        background-position: center;
+    }
+    .text-container{
+        margin: 0;
+        padding: 0;
+    }
+    h1 {
+        font-size: 5.6rem;
+    }
+      .form-container {
+        margin: 0;
+        padding: 0;
+    }
+    .success-message-container {
+        height: 52rem;
+        width: 50.4rem;
+        background-color: var(--White);
+        border-radius: 3.6rem;
+        padding: 6.4rem;
+    }
+    .success-message-container h2 {
+        font-size: 5.2rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .main-container {
+        height: 64.1rem;
+        width: 90.4rem;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        margin: 0;
+        padding: 3.2rem;
+    }
+    .img-container {
+        background-image: url(./assets/images/illustration-sign-up-desktop.svg);
+        height: 59.3rem;
+        width: 40rem;
+        background-position: cover;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+        max-height: none;
+
+    }
+    .text-container {
+        max-width: 37.6rem;
+        max-height: 45rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-right: 6.4rem;
+    }
+  
 }

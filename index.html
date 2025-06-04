@@ -11,9 +11,12 @@
       href="./assets/images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <script src="app.js" defer></script>
     <title>
       Frontend Mentor | Newsletter sign-up form with success message
@@ -40,9 +43,20 @@
           </div>
         </div>
         <div class="form-container">
-          <label for="email">Email address</label>
-          <input type="email" name="email" id="email-input" placeholder="email@company.com" required />
-          <button id="submit" type="submit" onclick="submitMessage()">Subscribe to monthly newsletter</button>
+          <div class="label-container">
+            <label for="email">Email address</label>
+            <span id="error-message">Invalid Email</span>
+          </div>
+          <input
+            type="email"
+            name="email"
+            id="email-input"
+            placeholder="email@company.com"
+            required
+          />
+          <button id="submit" type="submit" onclick="validateEmail()">
+            Subscribe to monthly newsletter
+          </button>
         </div>
       </div>
     </div>
@@ -52,12 +66,14 @@
         <h2>Thanks for subscribing!</h2>
         <p>
           A confirmation email has been sent to
-          <span>ash@loremcompany.com.</span> Please open it and click the button
+          <span id="input-email"></span> Please open it and click the button
           inside to confirm your subscription.
         </p>
       </div>
       <div class="button-container">
-        <button id="dismiss-message" onclick="dismissMessage()">Dismiss message</button>
+        <button id="dismiss-message" onclick="dismissMessage()">
+          Dismiss message
+        </button>
       </div>
     </div>
   </body>
